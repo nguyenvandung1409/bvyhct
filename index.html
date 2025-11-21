@@ -9,6 +9,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
+        /* CSS giữ nguyên như trước */
         :root {
             --primary-color: #0d4a6c;
             --secondary-color: #2d9f7d;
@@ -442,27 +443,27 @@
                 <div class="stats-row">
                     <div class="stat-card">
                         <h4>Tổng số khám bệnh</h4>
-                        <div class="stat-value">12,548</div>
+                        <div class="stat-value" id="totalPatients">3,245</div>
                         <div class="stat-change">+5.2% so với tháng trước</div>
                     </div>
                     <div class="stat-card">
                         <h4>Số lượt ngoại trú</h4>
-                        <div class="stat-value">10,207</div>
+                        <div class="stat-value" id="outpatients">2,607</div>
                         <div class="stat-change">+5.8% so với tháng trước</div>
                     </div>
                     <div class="stat-card">
                         <h4>Số lượt nội trú</h4>
-                        <div class="stat-value">2,341</div>
+                        <div class="stat-value" id="inpatients">638</div>
                         <div class="stat-change">+3.7% so với tháng trước</div>
                     </div>
                     <div class="stat-card">
                         <h4>Số ngày điều trị</h4>
-                        <div class="stat-value">15,672</div>
+                        <div class="stat-value" id="treatmentDays">4,672</div>
                         <div class="stat-change">+2.8% so với tháng trước</div>
                     </div>
                     <div class="stat-card">
                         <h4>Công suất giường bệnh</h4>
-                        <div class="stat-value">87.5%</div>
+                        <div class="stat-value" id="bedUtilization">87.5%</div>
                         <div class="stat-change">+4.1% so với tháng trước</div>
                     </div>
                 </div>
@@ -470,22 +471,22 @@
                 <div class="stats-row">
                     <div class="stat-card">
                         <h4>Số lượt X quang</h4>
-                        <div class="stat-value">3,245</div>
+                        <div class="stat-value" id="xray">845</div>
                         <div class="stat-change">+6.1% so với tháng trước</div>
                     </div>
                     <div class="stat-card">
                         <h4>Số lượt Siêu âm</h4>
-                        <div class="stat-value">4,128</div>
+                        <div class="stat-value" id="ultrasound">1,128</div>
                         <div class="stat-change">+7.3% so với tháng trước</div>
                     </div>
                     <div class="stat-card">
                         <h4>Số lượt Xét nghiệm</h4>
-                        <div class="stat-value">8,567</div>
+                        <div class="stat-value" id="labTests">2,567</div>
                         <div class="stat-change">+4.9% so với tháng trước</div>
                     </div>
                     <div class="stat-card">
                         <h4>Số lượt thủ thuật</h4>
-                        <div class="stat-value">1,234</div>
+                        <div class="stat-value" id="procedures">534</div>
                         <div class="stat-change">+3.2% so với tháng trước</div>
                     </div>
                 </div>
@@ -508,49 +509,49 @@
                         <tbody>
                             <tr>
                                 <td>Hào châm</td>
-                                <td>1,245</td>
+                                <td>345</td>
                                 <td>+12.5%</td>
                                 <td>18.3%</td>
                             </tr>
                             <tr>
                                 <td>Điện châm</td>
-                                <td>987</td>
+                                <td>287</td>
                                 <td>+8.7%</td>
                                 <td>14.5%</td>
                             </tr>
                             <tr>
                                 <td>Cứu</td>
-                                <td>1,098</td>
+                                <td>298</td>
                                 <td>+7.6%</td>
                                 <td>16.1%</td>
                             </tr>
                             <tr>
                                 <td>Giác hơi</td>
-                                <td>892</td>
+                                <td>292</td>
                                 <td>+11.2%</td>
                                 <td>13.1%</td>
                             </tr>
                             <tr>
                                 <td>Cấy chỉ</td>
-                                <td>634</td>
+                                <td>234</td>
                                 <td>+9.3%</td>
                                 <td>9.3%</td>
                             </tr>
                             <tr>
                                 <td>Điện xung</td>
-                                <td>756</td>
+                                <td>256</td>
                                 <td>+5.2%</td>
                                 <td>11.1%</td>
                             </tr>
                             <tr>
                                 <td>Siêu âm điều trị</td>
-                                <td>543</td>
+                                <td>243</td>
                                 <td>+4.8%</td>
                                 <td>8.0%</td>
                             </tr>
                             <tr>
                                 <td>Hồng ngoại</td>
-                                <td>892</td>
+                                <td>292</td>
                                 <td>+6.5%</td>
                                 <td>13.1%</td>
                             </tr>
@@ -563,12 +564,12 @@
                     <div class="dashboard">
                         <div class="card">
                             <h3>Số lượt khám BHYT</h3>
-                            <div class="value">9,845</div>
+                            <div class="value" id="insuranceOutpatients">2,545</div>
                             <div class="change positive">78.5% tổng lượt khám</div>
                         </div>
                         <div class="card">
                             <h3>Số điều trị nội trú BHYT</h3>
-                            <div class="value">1,875</div>
+                            <div class="value" id="insuranceInpatients">475</div>
                             <div class="change positive">80.1% tổng nội trú</div>
                         </div>
                     </div>
@@ -579,12 +580,12 @@
                     <div class="dashboard">
                         <div class="card">
                             <h3>Sốt xuất huyết</h3>
-                            <div class="value">42</div>
+                            <div class="value" id="dengueCases">42</div>
                             <div class="change negative">+5 ca so với tháng trước</div>
                         </div>
                         <div class="card">
                             <h3>Tay chân miệng</h3>
-                            <div class="value">28</div>
+                            <div class="value" id="handFootCases">28</div>
                             <div class="change positive">-3 ca so với tháng trước</div>
                         </div>
                     </div>
@@ -1168,104 +1169,127 @@
         
         // Hàm cập nhật dữ liệu theo năm
         function updateDataForYear(year) {
-            // Cập nhật tiêu đề biểu đồ
-            document.querySelectorAll('.chart-container canvas').forEach(canvas => {
-                const chart = Chart.getChart(canvas);
-                if (chart && chart.options.plugins.title) {
-                    chart.options.plugins.title.text = `Báo cáo khám chữa bệnh năm ${year}`;
-                    chart.update();
-                }
-            });
-            
-            // Cập nhật dữ liệu theo năm
+            // Dữ liệu cho từng năm
             const yearData = {
                 '2025': { 
-                    totalPatients: 12548, 
-                    outpatients: 10207,
-                    inpatients: 2341, 
-                    treatmentDays: 15672, 
+                    totalPatients: 3245, 
+                    outpatients: 2607,
+                    inpatients: 638, 
+                    treatmentDays: 4672, 
                     bedUtilization: 87.5,
-                    xray: 3245,
-                    ultrasound: 4128,
-                    labTests: 8567,
-                    procedures: 1234
+                    xray: 845,
+                    ultrasound: 1128,
+                    labTests: 2567,
+                    procedures: 534,
+                    insuranceOutpatients: 2545,
+                    insuranceInpatients: 475,
+                    dengueCases: 42,
+                    handFootCases: 28
                 },
                 '2024': { 
-                    totalPatients: 11850, 
-                    outpatients: 9600,
-                    inpatients: 2250, 
-                    treatmentDays: 14890, 
+                    totalPatients: 2850, 
+                    outpatients: 2300,
+                    inpatients: 550, 
+                    treatmentDays: 3890, 
                     bedUtilization: 83.2,
-                    xray: 3050,
-                    ultrasound: 3850,
-                    labTests: 8150,
-                    procedures: 1190
+                    xray: 750,
+                    ultrasound: 1050,
+                    labTests: 2150,
+                    procedures: 490,
+                    insuranceOutpatients: 2230,
+                    insuranceInpatients: 440,
+                    dengueCases: 37,
+                    handFootCases: 31
                 },
                 '2023': { 
-                    totalPatients: 11200, 
-                    outpatients: 9100,
-                    inpatients: 2100, 
-                    treatmentDays: 14200, 
+                    totalPatients: 2520, 
+                    outpatients: 2050,
+                    inpatients: 470, 
+                    treatmentDays: 3420, 
                     bedUtilization: 80.5,
-                    xray: 2900,
-                    ultrasound: 3650,
-                    labTests: 7800,
-                    procedures: 1150
+                    xray: 680,
+                    ultrasound: 950,
+                    labTests: 1980,
+                    procedures: 450,
+                    insuranceOutpatients: 1970,
+                    insuranceInpatients: 376,
+                    dengueCases: 32,
+                    handFootCases: 25
                 },
                 '2022': { 
-                    totalPatients: 10500, 
-                    outpatients: 8550,
-                    inpatients: 1950, 
-                    treatmentDays: 13500, 
+                    totalPatients: 2250, 
+                    outpatients: 1850,
+                    inpatients: 400, 
+                    treatmentDays: 3050, 
                     bedUtilization: 78.2,
-                    xray: 2750,
-                    ultrasound: 3450,
-                    labTests: 7450,
-                    procedures: 1100
+                    xray: 620,
+                    ultrasound: 850,
+                    labTests: 1750,
+                    procedures: 410,
+                    insuranceOutpatients: 1760,
+                    insuranceInpatients: 320,
+                    dengueCases: 28,
+                    handFootCases: 22
                 },
                 '2021': { 
-                    totalPatients: 9800, 
-                    outpatients: 8000,
-                    inpatients: 1800, 
-                    treatmentDays: 12800, 
+                    totalPatients: 1980, 
+                    outpatients: 1620,
+                    inpatients: 360, 
+                    treatmentDays: 2680, 
                     bedUtilization: 75.8,
-                    xray: 2600,
-                    ultrasound: 3250,
-                    labTests: 7100,
-                    procedures: 1050
+                    xray: 580,
+                    ultrasound: 780,
+                    labTests: 1580,
+                    procedures: 380,
+                    insuranceOutpatients: 1550,
+                    insuranceInpatients: 288,
+                    dengueCases: 25,
+                    handFootCases: 20
                 },
                 '2020': { 
-                    totalPatients: 9200, 
-                    outpatients: 7550,
-                    inpatients: 1650, 
-                    treatmentDays: 12100, 
+                    totalPatients: 1720, 
+                    outpatients: 1420,
+                    inpatients: 300, 
+                    treatmentDays: 2310, 
                     bedUtilization: 73.4,
-                    xray: 2450,
-                    ultrasound: 3050,
-                    labTests: 6750,
-                    procedures: 1000
+                    xray: 520,
+                    ultrasound: 710,
+                    labTests: 1420,
+                    procedures: 350,
+                    insuranceOutpatients: 1350,
+                    insuranceInpatients: 240,
+                    dengueCases: 22,
+                    handFootCases: 18
                 }
             };
             
             const data = yearData[year];
             if (data) {
                 // Cập nhật hàng 1
-                const statCardsRow1 = document.querySelectorAll('.stats-row:first-child .stat-card .stat-value');
-                if (statCardsRow1.length >= 5) {
-                    statCardsRow1[0].textContent = data.totalPatients.toLocaleString();
-                    statCardsRow1[1].textContent = data.outpatients.toLocaleString();
-                    statCardsRow1[2].textContent = data.inpatients.toLocaleString();
-                    statCardsRow1[3].textContent = data.treatmentDays.toLocaleString();
-                    statCardsRow1[4].textContent = data.bedUtilization + '%';
-                }
+                document.getElementById('totalPatients').textContent = data.totalPatients.toLocaleString();
+                document.getElementById('outpatients').textContent = data.outpatients.toLocaleString();
+                document.getElementById('inpatients').textContent = data.inpatients.toLocaleString();
+                document.getElementById('treatmentDays').textContent = data.treatmentDays.toLocaleString();
+                document.getElementById('bedUtilization').textContent = data.bedUtilization + '%';
                 
                 // Cập nhật hàng 2
-                const statCardsRow2 = document.querySelectorAll('.stats-row:nth-child(2) .stat-card .stat-value');
-                if (statCardsRow2.length >= 4) {
-                    statCardsRow2[0].textContent = data.xray.toLocaleString();
-                    statCardsRow2[1].textContent = data.ultrasound.toLocaleString();
-                    statCardsRow2[2].textContent = data.labTests.toLocaleString();
-                    statCardsRow2[3].textContent = data.procedures.toLocaleString();
+                document.getElementById('xray').textContent = data.xray.toLocaleString();
+                document.getElementById('ultrasound').textContent = data.ultrasound.toLocaleString();
+                document.getElementById('labTests').textContent = data.labTests.toLocaleString();
+                document.getElementById('procedures').textContent = data.procedures.toLocaleString();
+                
+                // Cập nhật BHYT
+                document.getElementById('insuranceOutpatients').textContent = data.insuranceOutpatients.toLocaleString();
+                document.getElementById('insuranceInpatients').textContent = data.insuranceInpatients.toLocaleString();
+                
+                // Cập nhật bệnh truyền nhiễm
+                document.getElementById('dengueCases').textContent = data.dengueCases;
+                document.getElementById('handFootCases').textContent = data.handFootCases;
+                
+                // Cập nhật tiêu đề biểu đồ
+                if (monthlyReportChart) {
+                    monthlyReportChart.options.plugins.title.text = `Báo cáo khám chữa bệnh năm ${year}`;
+                    monthlyReportChart.update();
                 }
             }
         }
@@ -1402,45 +1426,48 @@
         displayStaffData();
         
         // Biểu đồ báo cáo hàng tháng
-        const monthlyReportCtx = document.getElementById('monthlyReportChart').getContext('2d');
-        const monthlyReportChart = new Chart(monthlyReportCtx, {
-            type: 'line',
-            data: {
-                labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
-                datasets: [{
-                    label: 'Tổng số khám bệnh',
-                    data: [10500, 11200, 10800, 11500, 12000, 11800, 12500, 13000, 12800, 13200, 13500, 12548],
-                    borderColor: '#2d9f7d',
-                    backgroundColor: 'rgba(45, 159, 125, 0.1)',
-                    tension: 0.4,
-                    fill: true
-                }, {
-                    label: 'Bệnh nhân nội trú',
-                    data: [1900, 1950, 2100, 2200, 2250, 2300, 2350, 2400, 2380, 2420, 2450, 2341],
-                    borderColor: '#ffc145',
-                    backgroundColor: 'rgba(255, 193, 69, 0.1)',
-                    tension: 0.4,
-                    fill: true
-                }]
-            },
-            options: {
-                responsive: true,
-                plugins: {
-                    legend: {
-                        position: 'top',
-                    },
-                    title: {
-                        display: true,
-                        text: 'Báo cáo khám chữa bệnh năm 2025'
-                    }
+        let monthlyReportChart;
+        const monthlyReportCtx = document.getElementById('monthlyReportChart');
+        if (monthlyReportCtx) {
+            monthlyReportChart = new Chart(monthlyReportCtx, {
+                type: 'line',
+                data: {
+                    labels: ['Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6', 'Tháng 7', 'Tháng 8', 'Tháng 9', 'Tháng 10', 'Tháng 11', 'Tháng 12'],
+                    datasets: [{
+                        label: 'Tổng số khám bệnh',
+                        data: [2850, 2950, 3000, 3100, 3150, 3200, 3250, 3300, 3280, 3320, 3350, 3245],
+                        borderColor: '#2d9f7d',
+                        backgroundColor: 'rgba(45, 159, 125, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }, {
+                        label: 'Bệnh nhân nội trú',
+                        data: [590, 600, 610, 620, 625, 630, 635, 640, 638, 642, 645, 638],
+                        borderColor: '#ffc145',
+                        backgroundColor: 'rgba(255, 193, 69, 0.1)',
+                        tension: 0.4,
+                        fill: true
+                    }]
                 },
-                scales: {
-                    y: {
-                        beginAtZero: false
+                options: {
+                    responsive: true,
+                    plugins: {
+                        legend: {
+                            position: 'top',
+                        },
+                        title: {
+                            display: true,
+                            text: 'Báo cáo khám chữa bệnh năm 2025'
+                        }
+                    },
+                    scales: {
+                        y: {
+                            beginAtZero: false
+                        }
                     }
                 }
-            }
-        });
+            });
+        }
         
         // Biểu đồ chất lượng
         const qualityCtx = document.getElementById('qualityChart').getContext('2d');
